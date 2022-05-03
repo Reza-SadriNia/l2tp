@@ -1,14 +1,10 @@
 # IPsec VPN Server Auto Setup Scripts
 
-[![Build Status](https://github.com/hwdsl2/setup-ipsec-vpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/setup-ipsec-vpn/actions/workflows/main.yml) [![GitHub Stars](docs/images/badges/github-stars.svg)](https://github.com/hwdsl2/setup-ipsec-vpn/stargazers) [![Docker Stars](docs/images/badges/docker-stars.svg)](https://github.com/hwdsl2/docker-ipsec-vpn-server) [![Docker Pulls](docs/images/badges/docker-pulls.svg)](https://github.com/hwdsl2/docker-ipsec-vpn-server)
-
 Set up your own IPsec VPN server in just a few minutes, with IPsec/L2TP, Cisco IPsec and IKEv2. All you need to do is provide your own VPN credentials, and let the scripts handle the rest.
 
 An IPsec VPN encrypts your network traffic, so that nobody between you and the VPN server can eavesdrop on your data as it travels via the Internet. This is especially useful when using unsecured networks, e.g. at coffee shops, airports or hotel rooms.
 
 We will use [Libreswan](https://libreswan.org/) as the IPsec server, and [xl2tpd](https://github.com/xelerance/xl2tpd) as the L2TP provider.
-
-*Read this in other languages: [English](README.md), [简体中文](README-zh.md).*
 
 #### Table of Contents
 
@@ -88,21 +84,6 @@ A cloud server, virtual private server (VPS) or dedicated server, freshly instal
 - Red Hat Enterprise Linux (RHEL) 8 or 7
 - Amazon Linux 2
 - Alpine Linux 3.15 or 3.14
-
-This also includes Linux VMs in public clouds, such as [DigitalOcean](https://blog.ls20.com/digitalocean), [Vultr](https://blog.ls20.com/vultr), [Linode](https://blog.ls20.com/linode), [OVH](https://www.ovhcloud.com/en/vps/) and [Microsoft Azure](https://azure.microsoft.com). Public cloud users can also deploy using [user data](https://blog.ls20.com/ipsec-l2tp-vpn-auto-setup-for-ubuntu-12-04-on-amazon-ec2/#vpnsetup).
-
-[![Deploy to DigitalOcean](docs/images/do-install-button.png)](http://dovpn.carlfriess.com) &nbsp;[![Deploy to Linode](docs/images/linode-deploy-button.png)](https://cloud.linode.com/stackscripts/37239) &nbsp;[![Deploy to Azure](docs/images/azure-deploy-button.png)](azure/README.md)
-
-[**&raquo; I want to run my own VPN but don't have a server for that**](https://blog.ls20.com/ipsec-l2tp-vpn-auto-setup-for-ubuntu-12-04-on-amazon-ec2/#gettingavps)
-
-A pre-built [Docker image](https://github.com/hwdsl2/docker-ipsec-vpn-server) is also available. Advanced users can install on a [Raspberry Pi](https://www.raspberrypi.org). [[1]](https://elasticbyte.net/posts/setting-up-a-native-cisco-ipsec-vpn-server-using-a-raspberry-pi/) [[2]](https://www.stewright.me/2018/07/create-a-raspberry-pi-vpn-server-using-l2tpipsec/)
-
-<a name="debian-10-note"></a>
-\* Debian 11/10 users should [use the standard Linux kernel](docs/clients.md#debian-10-kernel).   
-<a name="centos-8-note"></a>
-\*\* CentOS Linux 8 [is no longer supported](https://www.centos.org/centos-linux-eol/).
-
-:warning: **DO NOT** run these scripts on your PC or Mac! They should only be used on a server!
 
 ## Installation
 
@@ -205,8 +186,6 @@ If you get an error when trying to connect, see [Troubleshooting](docs/clients.m
 Enjoy your very own VPN! :sparkles::tada::rocket::sparkles:
 
 ## Important notes
-
-*Read this in other languages: [English](README.md#important-notes), [简体中文](README-zh.md#重要提示).*
 
 **Windows users**: For IPsec/L2TP mode, a [one-time registry change](docs/clients.md#windows-error-809) is required if the VPN server or client is behind NAT (e.g. home router).
 
